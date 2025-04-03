@@ -57,6 +57,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="a5g-lk-6xQ"/>
                     <connections>
                         <outlet property="emailLabel" destination="kqn-pI-eir" id="IWH-qZ-V9D"/>
                         <outlet property="passwordLabel" destination="oYH-KO-03C" id="Blo-Xl-dzv"/>
@@ -76,20 +77,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCm-Sd-2mh">
-                                <rect key="frame" x="159" y="391" width="75" height="35"/>
+                                <rect key="frame" x="156" y="391" width="82" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Log out"/>
+                                <connections>
+                                    <action selector="logOut:" destination="sRi-Uw-Zar" eventType="touchUpInside" id="xAx-Op-CAV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aiY-6J-uhO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="s.circle.fill" catalog="system" id="Wcs-8O-9D0"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toViewVC" modalPresentationStyle="fullScreen" id="MOc-Vi-9Ot"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3kb-yc-blf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="956" y="968"/>
+            <point key="canvasLocation" x="954.96183206106866" y="967.6056338028169"/>
         </scene>
         <!--Upload-->
         <scene sceneID="akZ-xb-H1F">
