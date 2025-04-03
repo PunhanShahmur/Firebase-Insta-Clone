@@ -40,18 +40,26 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign up"/>
+                                <connections>
+                                    <action selector="signUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Cq-6c-JkG"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBk-y1-CiG">
                                 <rect key="frame" x="241" y="456" width="76" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Sign in"/>
+                                <connections>
+                                    <action selector="signIn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RGx-Gh-vvb"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="emailLabel" destination="kqn-pI-eir" id="IWH-qZ-V9D"/>
+                        <outlet property="passwordLabel" destination="oYH-KO-03C" id="Blo-Xl-dzv"/>
                         <segue destination="YY4-IK-Cxl" kind="presentation" identifier="toFeedVC" modalPresentationStyle="fullScreen" id="git-Wg-jHC"/>
                     </connections>
                 </viewController>
@@ -62,10 +70,18 @@
         <!--Settings-->
         <scene sceneID="NbM-ui-G6K">
             <objects>
-                <viewController id="sRi-Uw-Zar" sceneMemberID="viewController">
+                <viewController id="sRi-Uw-Zar" customClass="SettingsViewController" customModule="Firebase_Instagram_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zUj-Br-M8m">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCm-Sd-2mh">
+                                <rect key="frame" x="159" y="391" width="75" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="aiY-6J-uhO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -78,7 +94,7 @@
         <!--Upload-->
         <scene sceneID="akZ-xb-H1F">
             <objects>
-                <viewController id="asw-1D-WvM" sceneMemberID="viewController">
+                <viewController id="asw-1D-WvM" customClass="UploadViewController" customModule="Firebase_Instagram_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZKE-s5-mje">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -94,7 +110,7 @@
         <!--Feed-->
         <scene sceneID="8So-3k-2u6">
             <objects>
-                <viewController id="tPp-aM-GcA" sceneMemberID="viewController">
+                <viewController id="tPp-aM-GcA" customClass="FeedViewController" customModule="Firebase_Instagram_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ES7-9U-1ZB">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -110,7 +126,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="ALe-tq-ehg">
             <objects>
-                <tabBarController id="YY4-IK-Cxl" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabBarId" id="YY4-IK-Cxl" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="n9n-Zl-w2X"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dlf-jt-xcb">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
